@@ -3,14 +3,152 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <description>A simple program written in Java designed to teach and practice "How to turn abstract ideas (queue operations) into working code".</description>
 
     <groupId>at.fhj.msd</groupId>
     <artifactId>drink_queue_project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+    <name>Drink_Queue_Project</name>
+    <url>https://github.com/rozaliyaAleksandrova/Drink_Queue_Project</url>
+ 
+      
+  <developers>
+    <developer>
+      <id>rozaliyaAleksandrova</id>
+      <name>Rozaliya Aleksandrova</name>
+      <email>rozaliya.aleksandrova@edu.fh-joanneum.at</email>
+      <url>https://github.com/rozaliyaAleksandrova/Drink_Queue_Project.git</url>
+      <organization>FH JOANNEUM GmbH</organization>
+      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+      <properties>
+        <picUrl>https://avatars.githubusercontent.com/u/202040141?v=4</picUrl>
+      </properties>
+    </developer>
+
+     <developer>
+      <id>Juma2016</id>
+      <name>Mario ....Sheinoda</name>
+      <email>...........@edu.fh-joanneum.at</email>
+      <organization>FH JOANNEUM GmbH</organization>
+      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+      <properties>
+        <picUrl>............</picUrl>
+      </properties>
+    </developer>
+  </developers>
+
+   <properties>
+        <maven.compiler.source>23</maven.compiler.source>
+        <maven.compiler.target>23</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>23</maven.compiler.release>
     </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.junit</groupId>
+        <artifactId>junit-bom</artifactId>
+        <version>5.11.0</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.27.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.27.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j2-impl</artifactId>
+      <version>2.27.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+        <configuration>
+          <source>21</source>
+          <target>21</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <mainClass>at.fhj.msd.Main</mainClass>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.12</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>prepare-agent</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>report</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.12.1</version>
+      </plugin>
+    </plugins>
+  </build>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+    </plugins>
+  </reporting>
 </project>
