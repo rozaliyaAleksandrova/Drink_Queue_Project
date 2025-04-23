@@ -1,116 +1,52 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+ ================================
+# General ignoring
+# ================================
 
-out/
-build/
-.idea/
-*.class
-.logg
-
+# Log files
+*.log
 logs/
 logs/*.log
-*.log
-src/main/resources/
-src/main/resources/log4j2.xml
+.logg
+
+# Build and target directories
+build/
+build
+out/
+target/
 /target/
+!**/src/main/**/target/
+!**/src/test/**/target/
 !.mvn/wrapper/maven-wrapper.jar
 
-### STS ###
-.apt_generated
-.classpath
-.project
-.settings
-.springBeans
-.sts4-cache
+# Resources
+src/main/resources/
+src/main/resources/log4j2.xml
 
+# Files created by the operating system
+.DS_Store
+*.DS_Store
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+.desktop.ini
 
-# Created by https://www.gitignore.io/api/git,java,maven,eclipse,windows
-
-### Eclipse ###
-
-.metadata
-bin/
-tmp/
+# Temporary and backup files
 *.tmp
 *.bak
+*~
 *.swp
-*~.nib
-local.properties
-.settings/
-.loadpath
-.recommenders
+.#*
+*#
+*.stackdump
 
-# External tool builders
-.externalToolBuilders/
+# ================================
+# Java-specific
+# ================================
 
-# Locally stored "Eclipse launch configurations"
-*.launch
-
-# PyDev specific (Python IDE for Eclipse)
-*.pydevproject
-
-# CDT-specific (C/C++ Development Tooling)
-.cproject
-
-# CDT- autotools
-.autotools
-
-# Java annotation processor (APT)
-.factorypath
-
-# PDT-specific (PHP Development Tools)
-.buildpath
-
-# sbteclipse plugin
-.target
-
-# Tern plugin
-.tern-project
-
-# TeXlipse plugin
-.texlipse
-
-# Code Recommenders
-.recommenders/
-
-# Scala IDE specific (Scala & Java development for Eclipse)
-.cache-main
-.scala_dependencies
-.worksheet
-
-.sts4-cache/
-
-### Git ###
-# Created by git for backups. To disable backups in Git:
-# $ git config --global mergetool.keepBackup false
-*.orig
-
-# Created by git when using merge tools for conflicts
-*.BACKUP.*
-*.BASE.*
-*.LOCAL.*
-*.REMOTE.*
-*_BACKUP_*.txt
-*_BASE_*.txt
-*_LOCAL_*.txt
-*_REMOTE_*.txt
-
-### Java ###
-# Compiled class file
+# Compiled classes
 *.class
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# Java archives
 *.jar
 *.war
 *.nar
@@ -119,11 +55,13 @@ local.properties
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# Java log files
+*.log
+
+# Java error logs
 hs_err_pid*
 
-### Maven ###
-target/
+# Maven
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -134,38 +72,34 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-ehthumbs.db
-ehthumbs_vista.db
+# Eclipse
+.metadata
+.classpath
+.project
+.settings/
+.loadpath
+.recommenders/
+*.launch
+*.pydevproject
+.cproject
+.autotools
+.factorypath
+.buildpath
+.target
+.tern-project
+.texlipse
+.cache-main
+.scala_dependencies
+.worksheet
+.sts4-cache/
 
-# Dump file
-*.stackdump
-
-# Folder config file
-[Dd]esktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IntelliJ IDEA
+.idea/
 *.iml
+*.iws
 *.ipr
 
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -175,25 +109,112 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Some additional ignores (sort later)
-*.DS_Store
-*.sw?
-.#*
-*#
-*~
-bin
-build
+# ================================
+# Version management & backup
+# ================================
+
+# Git backups & conflicts
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+# ================================
+# Project management & IDEs
+# ================================
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# IntelliJ IDEA & NetBeans
+.idea
+*.iml
+*.iws
+*.ipr
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+
+# Eclipse & Spring Tools Suite (STS)
+.eclipse
+.metadata
+.springBeans
+.sts4-cache/
+
+# PyDev (Python for Eclipse)
+*.pydevproject
+
+# CDT (C/C++ Development Tooling)
+.cproject
+
+# ================================
+# Files for special environments
+# ================================
+
+# Maven
+/target/
+target/
 target
-*.sublime-*
-/scratch
-.gradle
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Log4j Konfiguration
+src/main/resources/log4j2.xml
+
+# ================================
+# Other files
+# ================================
+# PDFs, HTMLs, etc.
+*.pdf
+*.html
 README.html
 .exercism
+.idea/
 
-.DS_Store
-out/
+
+# Backup and temporary files
+*.sublime-*
+.svn/
+.svnignore
+.svn/
+.svn
+.sublime-*
+
+*.iml%
+.apt_generated
+.settings
+.sts4-cache
+bin/
+bin
+tmp/
+*~.nib
+local.properties
+.recommenders
+.externalToolBuilders/
+*.ctxt
+.mtj.tmp/
 .micronaut/
-
+.gradle
+/scratch
+*.sw?
+.env

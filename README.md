@@ -113,8 +113,8 @@ To enable logging in this project, ensure that you correctly configure the `log4
 
 ## 📋 Tasks List
 
-- [ ] Branch maven
-- [ ] Branch readme
+- [x] Branch maven
+- [x] Branch readme
 - [ ] Branchmaven_detail - pom.xml
 - [ ] Branch bug_hunt
 - [ ] Branch drink
