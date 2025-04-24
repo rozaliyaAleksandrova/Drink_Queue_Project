@@ -82,7 +82,7 @@ java ..........
    ![example of a main method](./resources/images/main.png)
 3. If you try to run the code without a main method you will get the following message in VSCODE\ 
 
-   ![error message](./resources/images/error.png)
+   ![error message](./resources/images/......png)
 4. Compile the Java files using a Java compiler. A compiler can be downloaded from here:
    [jetbrain](//www.jetbrains.com)
 
@@ -91,19 +91,19 @@ We recommend:
 or
 [Visual Studio Code](//www.jetbrains.com)
 
-     [Problems with the installation? Click here!](https://www.jetbrains.com/help/idea/getting-started.html)
+[Problems with the installation? Click here!](https://www.jetbrains.com/help/idea/getting-started.html)
 
-1. Run the `Calculator` to see the output of the code.
+1. Run the `......` to see the output of the code.
 
 ### 📊 Example Output
 
 When you run the application, you will see an output similar to the following:\
-![example](./resources/images/example.png)
+![example](./resources/images/.....png)
 
 ### 🪜 Structure
 
 Мake sure you have the proper structure to execute the code. See the example below.⬇️\
-![Srukture](./resources/images/tree.png)
+![Srukture](./resources/images/.....png)
 
 ### Log4j2 Configuration
 
@@ -122,6 +122,28 @@ To enable logging in this project, ensure that you correctly configure the `log4
 - [ ] Branch javadoc
 - [ ] Branch tests
 - [ ] Branch maven_site
-- [x] https://github.com/Juma2016/DrinkQueue_Project.git
+  
 
+
+<<<<<<< HEAD
+=======
+## 🤝 Group members 
+
+
+Mario Shenouda
+
+[member1.md](./member1.md)
+
+[GitHub Profile - Shenouda](............)
+
+Rozaliya Aleksandrova
+
+[member2.md](./member2.md)
+
+[GitHub Profile - Aleksandrova](https://github.com/rozaliyaAleksandrova)
+
+
+
+
+>>>>>>> bug_hunt
 
