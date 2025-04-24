@@ -594,9 +594,19 @@ public class DrinkQueue {
 
 ```
 
-## ⚔️ Usage
+## ⚔️Getting Started
+
 
 1. Clone the repository or download the source code.
+   
+To clone this project, run:
+
+```
+bash git clone https://github.com/rozaliyaAleksandrova/Drink_Queue_Project 
+```
+Or copy the code from the README.md you are currently reading.
+
+
 2. 📝 Аdd main method.\
    ![example of a main method](./resources/images/Main.png)
 3. If you try to run the code without a main method you will get the following message in VSCODE
@@ -616,7 +626,8 @@ or
 
 ### 📊 Example Output
 
-When you run the application, you will see an output similar to the following:\
+When you run the application, you will see an output similar to the following:
+
 ![example](./resources/images/.....png)
 
 
