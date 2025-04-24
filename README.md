@@ -27,11 +27,45 @@
 7. Cocktail.java - represents a cocktail drink consisting of multiple liquid ingredients.
 
 8. DrinkQueue.java - implementing Drink interface in a queue.
+   
+## ⚔️Getting Started
 
 
-## 🛠️ How to use the program
+1. Clone the repository or download the source code.
+   
+To clone this project, run:
 
-**Cloning the code**:
+```
+bash git clone https://github.com/rozaliyaAleksandrova/Drink_Queue_Project 
+```
+Or copy the code from the README.md you are currently reading.
+
+
+2. 📝 Аdd main method.\
+   ![example of a main method](./resources/images/Main.png)
+3. If you try to run the code without a main method you will get the following message in VSCODE
+
+   ![error message](./resources/images/error.png)
+4. Compile the Java files using a Java compiler. A compiler can be downloaded from here:
+   [jetbrain](//www.jetbrains.com)
+
+We recommend:
+[IntelliJ IDEA](https://www.jetbrains.com/idea/)
+or
+[Visual Studio Code](//www.jetbrains.com)
+
+[Problems with the installation? Click here!](https://www.jetbrains.com/help/idea/getting-started.html)
+
+1. Run the `main()` method in the Main class to see the output of the code.
+
+### 📊 Example Output
+
+When you run the application, you will see an output similar to the following:
+
+![example](./resources/images/.....png)
+
+
+## 🛠️ Copying the code
 
 `1. class Drink:`
 ```
@@ -593,43 +627,6 @@ public class DrinkQueue {
 }
 
 ```
-
-## ⚔️Getting Started
-
-
-1. Clone the repository or download the source code.
-   
-To clone this project, run:
-
-```
-bash git clone https://github.com/rozaliyaAleksandrova/Drink_Queue_Project 
-```
-Or copy the code from the README.md you are currently reading.
-
-
-2. 📝 Аdd main method.\
-   ![example of a main method](./resources/images/Main.png)
-3. If you try to run the code without a main method you will get the following message in VSCODE
-
-   ![error message](./resources/images/error.png)
-4. Compile the Java files using a Java compiler. A compiler can be downloaded from here:
-   [jetbrain](//www.jetbrains.com)
-
-We recommend:
-[IntelliJ IDEA](https://www.jetbrains.com/idea/)
-or
-[Visual Studio Code](//www.jetbrains.com)
-
-[Problems with the installation? Click here!](https://www.jetbrains.com/help/idea/getting-started.html)
-
-1. Run the `main()` method in the Main class to see the output of the code.
-
-### 📊 Example Output
-
-When you run the application, you will see an output similar to the following:
-
-![example](./resources/images/.....png)
-
 
 
 ## 🎊 How to make the code more interesting 🎊
