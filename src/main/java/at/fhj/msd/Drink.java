@@ -1,58 +1,49 @@
 package at.fhj.msd;
 
 /**
- * Abstract base class for concrete drink classes
+ * Abstract base class for concrete drink classes.
+ * Defines common properties and methods for all drinks.
  */
 
 public abstract class Drink {
 
     /**
-     * Name of the drink
+     * Name of the drink.
      */
-
     protected String name;
     
     /**
-     * Creates a Drink object with given name
-     *
-     * @param name name of the drink
-     *
+     * Constructor to create a Drink object with a given name.
      */
-
     public Drink(String name) {
-
         this.name = name;
     }
 
     /**
-     * Calculates and returns volume of drink
-     *
-     * @return the volume of drink in liter
+     * Calculates and returns the volume of the drink.
      */
-
     public abstract double getVolume();
 
     /**
-     * Calculates and returns the alcohol percentage
-     *
-     * @return alcohol volume percent (e.g. 50)
+     * Calculates and returns the alcohol percentage of the drink.
      */
-
     public abstract double getAlcoholPercent();
-    
-    /**
-     * Gives information if drink is alcoholic or not
-     *
-     * @return true when alcoholic liquids are present, otherwise false
-     */
 
+    /**
+     * Indicates whether the drink contains alcohol.
+     */
     public abstract boolean isAlcoholic();
 
-
+    /**
+     * Gets the name of the drink.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets the name of the drink.
+     */
     public void setName(String name) {
         this.name = name;
     }
