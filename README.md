@@ -1,15 +1,14 @@
-#  🍹 Drink_Queue_Project
+# 🍹 Drink_Queue_Project
 
 **A simple program written in Java** designed to teach and practice the following concepts:
 
--  How to turn abstract ideas (queue operations) into working code.
--  How to use arrays to store elements.
--  Polymorphism: A reference of type IQueue can point to any implementation.
--  Good practice: Interfaces are preferred over concrete classes for flexible design.
--  Encapsulation: Classes hide their internal data (e.g., queue state) and provide public methods.
--  Polymorphism: Methods like peek() and element() have the same purpose but different error behavior.
+- How to turn abstract ideas (queue operations) into working code.
+- How to use arrays to store elements.
+- Polymorphism: A reference of type IQueue can point to any implementation.
+- Good practice: Interfaces are preferred over concrete classes for flexible design.
+- Encapsulation: Classes hide their internal data (e.g., queue state) and provide public methods.
+- Polymorphism: Methods like peek() and element() have the same purpose but different error behavior.
   
-
 ## 🏗️ Features
 
 1. Drink.java - abstract base class.
@@ -27,6 +26,7 @@
 **Cloning the code**:
 
 1 class Drink:
+
 ```
 package at.fhj.msd;
 ...
@@ -34,6 +34,7 @@ package at.fhj.msd;
 ```
 
 2 class Liquid
+
 ```
 package at.fhj.msd;
 ...
@@ -41,34 +42,37 @@ package at.fhj.msd;
 ```
 
 3 class SimpleDrink
+
 ```
 package at.fhj.msd;
 ...
 
 ```
+
 4 class StringQueue
+
 ```
 package at.fhj.msd;
 ...
 
 ```
-
 
 5 public interface IQueue
+
 ```
 package at.fhj.msd;
 ...
 
 ```
 
-#### Compile the program:
+#### Compile the program
 
 ```
 bash
 javac .............java
 ```
 
-### Run the program:
+### Run the program
 
 ```
 bash
@@ -80,7 +84,7 @@ java ..........
 1. Clone the repository or download the source code.
 2. 📝 Аdd main method.\
    ![example of a main method](./resources/images/main.png)
-3. If you try to run the code without a main method you will get the following message in VSCODE\ 
+3. If you try to run the code without a main method you will get the following message in VSCODE\
 
    ![error message](./resources/images/error.png)
 4. Compile the Java files using a Java compiler. A compiler can be downloaded from here:
@@ -91,7 +95,6 @@ We recommend:
 or
 [Visual Studio Code](//www.jetbrains.com)
 
-     [Problems with the installation? Click here!](https://www.jetbrains.com/help/idea/getting-started.html)
 
 1. Run the `Calculator` to see the output of the code.
 
@@ -115,13 +118,10 @@ To enable logging in this project, ensure that you correctly configure the `log4
 
 - [x] Branch maven
 - [x] Branch readme
-- [ ] Branchmaven_detail - pom.xml
+- [x] Branchmaven_detail - pom.xml
 - [ ] Branch bug_hunt
 - [ ] Branch drink
 - [ ] Branch queue
 - [ ] Branch javadoc
 - [ ] Branch tests
 - [ ] Branch maven_site
-- [x] https://github.com/Juma2016/DrinkQueue_Project.git
-
-
