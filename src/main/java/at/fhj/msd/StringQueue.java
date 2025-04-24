@@ -1,4 +1,4 @@
-
+package at.fhj.msd;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,38 +13,33 @@ public class StringQueue implements IQueue {
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
 
-  public StringQueue(int maxsize) {
-    maxSize = maxSize;
+  public StringQueue(int maxSize) {
+   this.maxSize = maxSize;
   }
 
   @Override
   public boolean offer(String obj) {
-    if (elements.size() != maxSize)
-      elements.add(obj);
-    else
-      return false;
-
-    return true;
+      if (elements.size() < maxSize) {
+          return elements.add(obj);
+      } else {
+          return false;
+      }
   }
 
   @Override
   public String poll() {
-    String element = peek();
-
-    if (elements.size() == 0) {
-      elements.remove(0);
-    }
-
-    return element;
+      if (elements.isEmpty()) {
+          return null;
+      }
+      return elements.remove(0);
   }
 
   @Override
   public String remove() {
     String element = poll();
-    element = "";
-    if (element == null)
-      throw new NoSuchElementException("there's no element any more");
-
+    if (element == null){
+      throw new NoSuchElementException("There's no element any more.");
+    }
     return element;
   }
 
