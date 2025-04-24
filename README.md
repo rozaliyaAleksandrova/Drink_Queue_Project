@@ -124,15 +124,4 @@ To enable logging in this project, ensure that you correctly configure the `log4
 - [ ] Branch maven_site
 - [x] https://github.com/Juma2016/DrinkQueue_Project.git
 
-## 🤝 Group members 
-
-
-Mario Shenouda
-[member1.md](./member1.md)
-
-Rozaliya Aleksandrova
-[member2.md](./member2.md)
-
-
-
 
