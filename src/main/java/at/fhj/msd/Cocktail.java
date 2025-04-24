@@ -1,4 +1,4 @@
-package main.java.at.fhj.msd;
+package at.fhj.msd;
 
 import java.util.List;
 
@@ -22,25 +22,20 @@ public class Cocktail implements Drink {
 
     @Override
     public double getVolume() {
-        return ingredients.stream()
-                          .mapToDouble(Liquid::getVolume)
-                          .sum();
+        return ingredients.stream() .mapToDouble(Liquid::getVolume).sum();
     }
 
     @Override
     public double getAlcoholPercent() {
         double totalVolume = getVolume();
         if (totalVolume == 0) return 0;
-        double alcoholSum = ingredients.stream()
-            .mapToDouble(l -> l.getVolume() * l.getAlcoholPercent())
-            .sum();
+        double alcoholSum = ingredients.stream().mapToDouble(l -> l.getVolume() * l.getAlcoholPercent()).sum();
         return alcoholSum / totalVolume;
     }
 
     @Override
     public boolean isAlcoholic() {
-        return ingredients.stream()
-                          .anyMatch(l -> l.getAlcoholPercent() > 0);
+        return ingredients.stream().anyMatch(l -> l.getAlcoholPercent() > 0);
     }
 
     @Override
