@@ -53,21 +53,40 @@ public class SimpleDrink implements Drink{
     public boolean isAlcoholic() {
         return l.getAlcoholPercent() > 0;
     }
-
+    /**
+     * Returns name of drink
+     *
+     * @return name of drink
+     */
     @Override
     public String getName() {
         return name;
     }
-
+    /**
+     * Sets name of drink
+     *
+     * @param name new name of drink
+     * @return name of drink
+     * @throws IllegalArgumentException if name is null or empty
+     */
     @Override
     public void setName(String name) {
         this.name = name;
     }
-
+    /**
+     * Returns the liquid of the drink
+     *
+     * @return the liquid of the drink
+     */
     public Liquid getLiquid() {
         return l;
     }
-
+    /**
+     * Sets the liquid of the drink
+     *
+     * @param l the new liquid of the drink
+     * @param l
+     */
     public void setLiquid(Liquid l) {
         this.l = l;
     }
