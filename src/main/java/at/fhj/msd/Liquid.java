@@ -1,4 +1,4 @@
-package at.fhj.iit;
+package at.fhj.msd;
 // put into drinkss
 public class Liquid {
     
