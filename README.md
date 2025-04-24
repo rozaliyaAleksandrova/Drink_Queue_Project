@@ -95,10 +95,6 @@ We recommend:
 or
 [Visual Studio Code](//www.jetbrains.com)
 
-<<<<<<< HEAD
-[Problems with the installation? Click here!](https://www.jetbrains.com/help/idea/getting-started.html)
-=======
->>>>>>> 1d8dccbe3650dc4977bc3bc50544738cbe45ef3c
 
 1. Run the `......` to see the output of the code.
 
@@ -129,12 +125,6 @@ To enable logging in this project, ensure that you correctly configure the `log4
 - [ ] Branch javadoc
 - [ ] Branch tests
 - [ ] Branch maven_site
-<<<<<<< HEAD
-  
-
-
-<<<<<<< HEAD
-=======
 ## 🤝 Group members 
 
 
@@ -153,7 +143,4 @@ Rozaliya Aleksandrova
 
 
 
->>>>>>> bug_hunt
-
-=======
->>>>>>> 1d8dccbe3650dc4977bc3bc50544738cbe45ef3c
+bug_hunt
