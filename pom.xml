@@ -41,7 +41,7 @@
       </roles>
       <timezone>Europe/Vienna</timezone>
       <properties>
-        <picUrl>https://avatars.githubusercontent.com/u/180473282?s=400&v=4</picUrl>
+        <picUrl>https://avatars.githubusercontent.com/u/180473282?s=400;ampv=4</picUrl>
       </properties>
     </developer>
   </developers>
