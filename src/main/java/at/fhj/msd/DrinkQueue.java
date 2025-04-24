@@ -5,21 +5,21 @@ import java.util.Queue;
 import java.util.NoSuchElementException;
 
 /**
- * Class to manage drinks implementing Drink interface in a queue
+ * Class to manage drinks implementing Drink interface in a queue.
  */
 public class DrinkQueue {
 
     private Queue<Drink> drinks;
 
     /**
-     * Initializes the DrinkQueue
+     * Initializes the DrinkQueue.
      */
     public DrinkQueue() {
         drinks = new LinkedList<>();
     }
 
     /**
-     * Adds a drink to the queue
+     * Adds a drink to the queue.
      *
      * @param drink the Drink object to add
      * @return true if added successfully
@@ -29,7 +29,7 @@ public class DrinkQueue {
     }
 
     /**
-     * Retrieves and removes the head of the queue, or returns null if empty
+     * Retrieves and removes the head of the queue, or returns null if empty.
      *
      * @return the head of the queue or null if queue is empty
      */
@@ -38,7 +38,7 @@ public class DrinkQueue {
     }
 
     /**
-     * Retrieves and removes the head of the queue
+     * Retrieves and removes the head of the queue.
      *
      * @return the head of the queue
      * @throws NoSuchElementException if queue is empty
@@ -48,7 +48,7 @@ public class DrinkQueue {
     }
 
     /**
-     * Retrieves but does not remove the head of the queue, returns null if empty
+     * Retrieves but does not remove the head of the queue, returns null if empty.
      *
      * @return the head of the queue or null if queue is empty
      */
@@ -57,7 +57,7 @@ public class DrinkQueue {
     }
 
     /**
-     * Retrieves but does not remove the head of the queue
+     * Retrieves but does not remove the head of the queue.
      *
      * @return the head of the queue
      * @throws NoSuchElementException if queue is empty
@@ -67,7 +67,7 @@ public class DrinkQueue {
     }
 
     /**
-     * Checks if the queue is empty
+     * Checks if the queue is empty.
      *
      * @return true if queue is empty, false otherwise
      */
@@ -76,7 +76,7 @@ public class DrinkQueue {
     }
 
     /**
-     * Returns the number of drinks in the queue
+     * Returns the number of drinks in the queue.
      *
      * @return size of queue
      */

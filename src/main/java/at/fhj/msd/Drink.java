@@ -1,41 +1,38 @@
 package at.fhj.msd;
-/**
- * This is the abstract class for all drinks.
- * It contains the common properties and methods for all drinks.
- * The concrete drink classes will extend this class and implement the abstract methods.
- */
 
+/**
+ * Interface representing a general drink.
+ * Provides methods to access volume, alcohol content, and name.
+ */
 public interface Drink {
+
     /**
-     * Returns the volume of the drink in litres.
-     *
-     * @return the volume of the drink             
+     * Returns the total volume of the drink in litres.
+     * @return volume in litres
      */
     double getVolume();
 
     /**
-     * Returns the alcohol volume percent of the drink.
-     *
-     * @return the alcohol volume percent
+     * Returns the alcohol percentage of the drink.
+     * @return alcohol percent (e.g., 40 means 40%)
      */
     double getAlcoholPercent();
 
     /**
-     * Checks if the drink is alcoholic.
-     *
-     * @return true if the drink is alcoholic, false otherwise
+     * Checks if the drink contains alcohol.
+     * @return true if alcohol > 0, false otherwise
      */
     boolean isAlcoholic();
+
     /**
-     * Returns the name of the drink.
-     *
-     * @return the name of the drink
+     * Gets the name of the drink.
+     * @return name of the drink
      */
     String getName();
+
     /**
      * Sets the name of the drink.
-     *
-     * @param name the new name of the drink
+     * @param name name to set
      */
     void setName(String name);
 }

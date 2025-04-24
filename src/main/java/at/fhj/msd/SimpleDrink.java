@@ -1,31 +1,33 @@
 package at.fhj.msd;
 
 /**
- * Class represents a simple drink liquid which can be used in
- * drinks
+ * Class represents a simple drink liquid which can be used in drinks.
  */
-public class SimpleDrink implements Drink{
+public class SimpleDrink implements Drink {
+
     /**
-     * uses only one liquid
+     * The only liquid contained in the drink.
      */
     protected Liquid l;
 
+    /**
+     * Name of the drink.
+     */
     protected String name;
 
     /**
-     * Creates a SimpleDrink object with given name and
-     * liquid
+     * Creates a SimpleDrink object with given name and liquid.
      *
      * @param name name of drink
      * @param l only liquid in drink
      */
-    public SimpleDrink(String name, Liquid l){
+    public SimpleDrink(String name, Liquid l) {
         this.name = name;
         this.l = l;
     }
 
     /**
-     * Returns volume of liquid l
+     * Returns volume of the liquid.
      *
      * @return the volume of drink in litre
      */
@@ -35,7 +37,7 @@ public class SimpleDrink implements Drink{
     }
 
     /**
-     * Returns alcohol volume percent of liquid l
+     * Returns alcohol volume percent of the liquid.
      *
      * @return alcohol volume percent
      */
@@ -45,7 +47,7 @@ public class SimpleDrink implements Drink{
     }
 
     /**
-     * Gives information if drink is alcoholic or not
+     * Gives information if drink is alcoholic or not.
      *
      * @return true when alcoholic liquids are present, otherwise false
      */
@@ -53,8 +55,9 @@ public class SimpleDrink implements Drink{
     public boolean isAlcoholic() {
         return l.getAlcoholPercent() > 0;
     }
+
     /**
-     * Returns name of drink
+     * Returns name of drink.
      *
      * @return name of drink
      */
@@ -62,30 +65,30 @@ public class SimpleDrink implements Drink{
     public String getName() {
         return name;
     }
+
     /**
-     * Sets name of drink
+     * Sets the name of the drink.
      *
-     * @param name new name of drink
-     * @return name of drink
-     * @throws IllegalArgumentException if name is null or empty
+     * @param name name to set
      */
     @Override
     public void setName(String name) {
         this.name = name;
     }
+
     /**
-     * Returns the liquid of the drink
+     * Returns the liquid used in the drink.
      *
-     * @return the liquid of the drink
+     * @return liquid
      */
     public Liquid getLiquid() {
         return l;
     }
+
     /**
-     * Sets the liquid of the drink
+     * Sets the liquid used in the drink.
      *
-     * @param l the new liquid of the drink
-     * @param l
+     * @param l liquid to set
      */
     public void setLiquid(Liquid l) {
         this.l = l;
