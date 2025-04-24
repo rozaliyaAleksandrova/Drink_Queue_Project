@@ -20,7 +20,7 @@
       <email>rozaliya.aleksandrova@edu.fh-joanneum.at</email>
       <url>https://github.com/rozaliyaAleksandrova/Drink_Queue_Project.git</url>
       <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <organizationUrl>https://www.fh-joanneum.at/msd</organizationUrl>
       <roles>
         <role>developer</role>
       </roles>
@@ -32,16 +32,16 @@
 
      <developer>
       <id>Juma2016</id>
-      <name>Mario ....Sheinoda</name>
-      <email>...........@edu.fh-joanneum.at</email>
+      <name>Mario Shenouda</name>
+      <email>mario.shenouda@edu.fh-joanneum.at</email>
       <organization>FH JOANNEUM GmbH</organization>
-      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <organizationUrl>https://www.fh-joanneum.at/msd</organizationUrl>
       <roles>
         <role>developer</role>
       </roles>
       <timezone>Europe/Vienna</timezone>
       <properties>
-        <picUrl>............</picUrl>
+        <picUrl>https://avatars.githubusercontent.com/u/180473282?s=400&v=4</picUrl>
       </properties>
     </developer>
   </developers>
