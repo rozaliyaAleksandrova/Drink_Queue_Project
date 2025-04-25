@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 package at.fhj.msd;
 
-=======
->>>>>>> 1d8dccbe3650dc4977bc3bc50544738cbe45ef3c
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -15,28 +12,14 @@ import java.util.NoSuchElementException;
 public class StringQueue implements IQueue {
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
-<<<<<<< HEAD
 
 //Constructor to initialize queue with a specific max size
   public StringQueue(int maxSize) {
    this.maxSize = maxSize;
-=======
-  /**
-   * Constructor to create a StringQueue object.
-   * @param maxsize
-   */
-  public StringQueue(int maxsize) {
-    maxSize = maxSize;
->>>>>>> 1d8dccbe3650dc4977bc3bc50544738cbe45ef3c
   }
-<<<<<<< HEAD
   /**
    * Constructor to create a StringQueue object with default size.
    */
-=======
-
-// Prevent null elements from being added
->>>>>>> bug_hunt
   @Override
   public boolean offer(String obj) {
     if (obj == null) {
@@ -51,16 +34,11 @@ public class StringQueue implements IQueue {
       return false; 
     }
   }
-<<<<<<< HEAD
   /**
    * Adds an element to the queue.
    * @param obj the String object to add
    * @return true if added successfully
    */
-=======
-
-// Remove and return the head of the queue, or null if empty
->>>>>>> bug_hunt
   @Override
   public String poll() {  
     if (elements.isEmpty()) {
@@ -68,15 +46,8 @@ public class StringQueue implements IQueue {
     }
     return elements.remove(0);
   }
-<<<<<<< HEAD
-  /**
-   * Retrieves and removes the head of the queue, or returns null if empty
-   * @return the head of the queue or null if queue is empty
-   */
-=======
 
 // Remove and return the head; throw exception if empty
->>>>>>> bug_hunt
   @Override
   public String remove() {
     String element = poll();
@@ -85,27 +56,6 @@ public class StringQueue implements IQueue {
     }
     return element;
   }
-<<<<<<< HEAD
-  /**
-   * Retrieves and removes the head of the queue
-   * @return the head of the queue
-   * @throws NoSuchElementException if queue is empty
-   */
-  @Override
-  public String peek() {
-    String element;
-    if (elements.size() > 0)
-      element = elements.get(0);
-    else
-      element = null;
-
-    return element;
-  }
-  /**
-   * Retrieves but does not remove the head of the queue, returns null if empty
-   * @return the head of the queue or null if queue is empty
-   */
-=======
 
 // Return the head element without removing it, or null if empty
 @Override
@@ -118,7 +68,6 @@ public String peek() {
 }
 
 // Return the head element without removing it; throw exception if empty
->>>>>>> bug_hunt
   @Override
   public String element() {
     String element = peek();
