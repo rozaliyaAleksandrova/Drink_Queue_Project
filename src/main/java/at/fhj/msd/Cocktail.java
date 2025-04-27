@@ -13,6 +13,7 @@ public class Cocktail implements Drink {
 
     /**
      * Constructor to create a Cocktail object.
+     * 
      * @param name name of the cocktail
      * @param ingredients list of liquids
      */
@@ -23,6 +24,7 @@ public class Cocktail implements Drink {
 
     /**
      * Returns total volume of the drink.
+     * 
      * @return total volume
      */
     @Override
@@ -34,6 +36,7 @@ public class Cocktail implements Drink {
 
     /**
      * Calculates and returns alcohol percent based on all ingredients.
+     * 
      * @return alcohol percent
      */
     @Override
@@ -48,6 +51,7 @@ public class Cocktail implements Drink {
 
     /**
      * Checks if the drink contains any alcohol.
+     * 
      * @return true if any ingredient is alcoholic
      */
     @Override
@@ -58,6 +62,7 @@ public class Cocktail implements Drink {
 
     /**
      * Gets the name of the cocktail.
+     * 
      * @return name
      */
     @Override
@@ -67,6 +72,7 @@ public class Cocktail implements Drink {
 
     /**
      * Sets the name of the cocktail.
+     * 
      * @param name new name
      */
     @Override
@@ -76,6 +82,7 @@ public class Cocktail implements Drink {
 
     /**
      * Gets the list of ingredients.
+     * 
      * @return ingredients
      */
     public List<Liquid> getIngredients() {
@@ -84,6 +91,7 @@ public class Cocktail implements Drink {
 
     /**
      * Sets the list of ingredients.
+     * 
      * @param ingredients new list of ingredients
      */
     public void setIngredients(List<Liquid> ingredients) {

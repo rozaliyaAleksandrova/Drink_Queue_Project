@@ -27,6 +27,7 @@ package at.fhj.msd;
 
     /**
      * Gets the name of the liquid.
+     * 
      * @return name
      */
     public String getName() {
@@ -35,6 +36,7 @@ package at.fhj.msd;
 
     /**
      * Sets the name of the liquid.
+     * 
      * @param name new name
      */
     public void setName(String name) {
@@ -43,6 +45,7 @@ package at.fhj.msd;
 
     /**
      * Gets the volume.
+     * 
      * @return volume in liters
      */
     public double getVolume() {
@@ -51,6 +54,7 @@ package at.fhj.msd;
 
     /**
      * Sets the volume.
+     * 
      * @param volume new volume
      */
     public void setVolume(double volume) {
@@ -59,6 +63,7 @@ package at.fhj.msd;
 
     /**
      * Gets alcohol percentage.
+     * 
      * @return alcohol percentage
      */
     public double getAlcoholPercent() {
@@ -67,6 +72,7 @@ package at.fhj.msd;
 
     /**
      * Sets alcohol percentage.
+     * 
      * @param alcoholPercent new alcohol percentage
      */
     public void setAlcoholPercent(double alcoholPercent) {

@@ -1,7 +1,7 @@
 package at.fhj.msd;
 
 /**
- *This class represents a simple drink consisting of a single liquid.
+ *The class represents a simple drink consisting of a single liquid.
  * It can be used to model drinks made from one type of liquid.
  */
 public class SimpleDrink extends Drink{
@@ -15,7 +15,7 @@ public class SimpleDrink extends Drink{
      * Creates a SimpleDrink object with the given name and liquid.
      *
      * @param name name of drink
-     * @param l only liquid in drink
+     * @param l theliquid contained in the drink
      */
     public SimpleDrink(String name, Liquid l) {
         this.name = name;
@@ -25,7 +25,7 @@ public class SimpleDrink extends Drink{
     /**
      * Returns volume of the liquid.
      *
-     * @return the volume of drink in litres.
+     * @return the volume of drink in liters
      */
     @Override
     public double getVolume() {
@@ -43,7 +43,7 @@ public class SimpleDrink extends Drink{
     }
 
     /**
-     * Gives information  whether the drink is alcoholic or not.
+     * Indicates whether the drink is alcoholic or not.
      *
      * @return true when alcoholic liquids are present, otherwise false
      */
