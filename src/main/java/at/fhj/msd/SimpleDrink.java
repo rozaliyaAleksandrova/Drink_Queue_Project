@@ -4,7 +4,12 @@ package at.fhj.msd;
  *The class represents a simple drink consisting of a single liquid.
  * It can be used to model drinks made from one type of liquid.
  */
-public class SimpleDrink extends Drink{
+public class SimpleDrink implements Drink{
+
+    /**
+     * The name of the drink.
+     */
+    private String name;
 
     /**
      * The liquid contained in this drink.

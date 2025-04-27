@@ -378,6 +378,8 @@ public class StringQueue implements IQueue {
 ```
 package at.fhj.msd;
 
+import java.util.NoSuchElementException;
+
 /**
  * Interface for a Queue data structure.
  */
@@ -460,6 +462,7 @@ public class Cocktail implements Drink {
 
     /**
      * Constructor to create a Cocktail object.
+     * 
      * @param name name of the cocktail
      * @param ingredients list of liquids
      */
@@ -470,6 +473,7 @@ public class Cocktail implements Drink {
 
     /**
      * Returns total volume of the drink.
+     * 
      * @return total volume
      */
     @Override
@@ -481,6 +485,7 @@ public class Cocktail implements Drink {
 
     /**
      * Calculates and returns alcohol percent based on all ingredients.
+     * 
      * @return alcohol percent
      */
     @Override
@@ -495,6 +500,7 @@ public class Cocktail implements Drink {
 
     /**
      * Checks if the drink contains any alcohol.
+     * 
      * @return true if any ingredient is alcoholic
      */
     @Override
@@ -505,6 +511,7 @@ public class Cocktail implements Drink {
 
     /**
      * Gets the name of the cocktail.
+     * 
      * @return name
      */
     @Override
@@ -514,6 +521,7 @@ public class Cocktail implements Drink {
 
     /**
      * Sets the name of the cocktail.
+     * 
      * @param name new name
      */
     @Override
@@ -523,6 +531,7 @@ public class Cocktail implements Drink {
 
     /**
      * Gets the list of ingredients.
+     * 
      * @return ingredients
      */
     public List<Liquid> getIngredients() {
@@ -531,6 +540,7 @@ public class Cocktail implements Drink {
 
     /**
      * Sets the list of ingredients.
+     * 
      * @param ingredients new list of ingredients
      */
     public void setIngredients(List<Liquid> ingredients) {
@@ -641,7 +651,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         // 1. Creating of simple liquids
-        Liquid water = new Liquid("Water", 0.5, 0);
+        Liquid water = new Liquid("Water", 0.5, 0.0);
         Liquid vodka = new Liquid("Vodka", 0.05, 40);
         Liquid cola = new Liquid("Cola", 0.33, 0);
         
@@ -676,18 +686,19 @@ public class Main {
         System.out.println("\n === Serving drinks from a queue ===");
         while (!drinkQueue.isEmpty()) {
             Drink served = drinkQueue.poll();
-            System.out.println("Сервирана: " + served.getName());
+            System.out.println("Served:" + served.getName());
         }
     }
     
     private static void printDrinkInfo(Drink drink) {
         System.out.println("Drink: " + drink.getName());
-        System.out.printf("Volume: %.2f литра\n", drink.getVolume());
-        System.out.printf("Alcohol: %.1f%%\n", drink.getAlcoholPercent());
+        System.out.printf("Volume: %.2f liters \n", drink.getVolume());
+        System.out.printf("Alcohol: %.1f%% \n", drink.getAlcoholPercent());
         System.out.println("Alcoholic: " + (drink.isAlcoholic() ? "Yes" : "No"));
         System.out.println();
     }
 }
+
 
 ```
 
@@ -700,13 +711,15 @@ package at.fhj.msd;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Testing Drink System Implementation\n");
+        System.out.println("Testing Drink System Implementation: \n");
 
         // Test 1: Basic Liquid functionality
-        System.out.println("=== Testing Liquid Class ===");
+        System.out.println("=== Testing Liquid Class ===" + //
+                        "");
         Liquid water = new Liquid("Water", 0.5, 0);
         Liquid vodka = new Liquid("Vodka", 0.05, 40);
         testLiquid(water);
@@ -714,7 +727,7 @@ public class Main {
         System.out.println();
 
         // Test 2: SimpleDrink implementation
-        System.out.println("=== Testing SimpleDrink Class ===");
+        System.out.println("=== Testing SimpleDrink Class === \n");
         SimpleDrink cola = new SimpleDrink("Cola", water);
         SimpleDrink vodkaShot = new SimpleDrink("Vodka Shot", vodka);
         testSimpleDrink(cola);
@@ -722,7 +735,7 @@ public class Main {
         System.out.println();
 
         // Test 3: Cocktail implementation
-        System.out.println("=== Testing Cocktail Class ===");
+        System.out.println("=== Testing Cocktail Class === \n");
         List<Liquid> mojitoIngredients = Arrays.asList(
             new Liquid("Rum", 0.04, 40),
             new Liquid("Soda Water", 0.15, 0),
@@ -734,43 +747,43 @@ public class Main {
         System.out.println();
 
         // Test 4: DrinkQueue functionality
-        System.out.println("=== Testing DrinkQueue Class ===");
+        System.out.println("=== Testing DrinkQueue Class === \n");
         testDrinkQueue();
         System.out.println();
 
         // Test 5: StringQueue functionality
-        System.out.println("=== Testing StringQueue Class ===");
+        System.out.println("=== Testing StringQueue Class === \n");
         testStringQueue();
     }
 
     private static void testLiquid(Liquid liquid) {
-        System.out.println("Testing " + liquid.getName() + ":");
-        System.out.printf("- Volume: %.2f liters%n", liquid.getVolume());
-        System.out.printf("- Alcohol: %.1f%%%n", liquid.getAlcoholPercent());
-        System.out.println("- Is alcoholic? " + (liquid.getAlcoholPercent() > 0));
+        System.out.println("\n Testing " + liquid.getName() + ": \n");
+        System.out.printf(" Volume: %.2f liters%n", liquid.getVolume());
+        System.out.printf(" Alcohol: %.1f%%%n", liquid.getAlcoholPercent());
+        System.out.println(" Is alcoholic? " + (liquid.getAlcoholPercent() > 0));
     }
 
     private static void testSimpleDrink(SimpleDrink drink) {
         System.out.println("Testing " + drink.getName() + ":");
-        System.out.printf("- Total volume: %.2f liters%n", drink.getVolume());
-        System.out.printf("- Alcohol percentage: %.1f%%%n", drink.getAlcoholPercent());
-        System.out.println("- Is alcoholic? " + drink.isAlcoholic());
+        System.out.printf("Total volume: %.2f liters%n", drink.getVolume());
+        System.out.printf("Alcohol percentage: %.1f%%%n", drink.getAlcoholPercent());
+        System.out.println("Is alcoholic? " + drink.isAlcoholic());
         
         // Test liquid access
         Liquid liquid = drink.getLiquid();
-        System.out.println("- Contains liquid: " + liquid.getName());
+        System.out.println("Contains liquid: " + liquid.getName());
     }
 
     private static void testCocktail(Cocktail cocktail) {
         System.out.println("Testing " + cocktail.getName() + ":");
-        System.out.printf("- Total volume: %.2f liters%n", cocktail.getVolume());
-        System.out.printf("- Average alcohol: %.1f%%%n", cocktail.getAlcoholPercent());
-        System.out.println("- Is alcoholic? " + cocktail.isAlcoholic());
+        System.out.printf("Total volume: %.2f liters%n", cocktail.getVolume());
+        System.out.printf("Average alcohol: %.1f%%%n", cocktail.getAlcoholPercent());
+        System.out.println("Is alcoholic? " + cocktail.isAlcoholic());
         
         // Display ingredients
-        System.out.println("- Ingredients:");
+        System.out.println("Ingredients:");
         for (Liquid ingredient : cocktail.getIngredients()) {
-            System.out.printf("  - %s (%.2fL, %.1f%%)%n", 
+            System.out.printf("   %s (%.2fL, %.1f%%)%n", 
                 ingredient.getName(),
                 ingredient.getVolume(),
                 ingredient.getAlcoholPercent());
@@ -788,15 +801,15 @@ public class Main {
         System.out.println("Adding drinks to queue...");
         queue.offer(cola);
         queue.offer(beer);
-        System.out.println("- First drink in queue: " + queue.peek().getName());
+        System.out.println("First drink in queue: " + queue.peek().getName());
         
         // Test poll
         Drink served = queue.poll();
-        System.out.println("- Served: " + served.getName());
-        System.out.println("- Next drink: " + queue.peek().getName());
+        System.out.println("Served: " + served.getName());
+        System.out.println("Next drink: " + queue.peek().getName());
         
         // Test queue size
-        System.out.println("- Queue size: " + queue.size());
+        System.out.println("Queue size: " + queue.size());
     }
 
     private static void testStringQueue() {
@@ -804,26 +817,26 @@ public class Main {
         
         // Test offer
         System.out.println("Adding elements to queue...");
-        System.out.println("- Offer 'First': " + queue.offer("First"));
-        System.out.println("- Offer 'Second': " + queue.offer("Second"));
-        System.out.println("- Offer 'Third': " + queue.offer("Third"));
-        System.out.println("- Offer 'Fourth' (should fail): " + queue.offer("Fourth"));
+        System.out.println("Offer 'First': " + queue.offer("First"));
+        System.out.println("Offer 'Second': " + queue.offer("Second"));
+        System.out.println("Offer 'Third': " + queue.offer("Third"));
+        System.out.println("Offer 'Fourth' (should fail): " + queue.offer("Fourth"));
         
         // Test peek and poll
-        System.out.println("- Peek: " + queue.peek());
-        System.out.println("- Poll: " + queue.poll());
-        System.out.println("- New peek: " + queue.peek());
+        System.out.println("Peek: " + queue.peek());
+        System.out.println("Poll: " + queue.poll());
+        System.out.println("New peek: " + queue.peek());
         
         // Test element and remove
-        System.out.println("- Element: " + queue.element());
-        System.out.println("- Remove: " + queue.remove());
+        System.out.println("Element: " + queue.element());
+        System.out.println("Remove: " + queue.remove());
         
         // Test empty queue behavior
         try {
-            System.out.println("- Trying remove on empty queue...");
+            System.out.println("Trying remove on empty queue...");
             queue.remove();
         } catch (NoSuchElementException e) {
-            System.out.println("  - Caught expected exception: " + e.getMessage());
+            System.out.println("Caught expected exception: " + e.getMessage());
         }
     }
 }

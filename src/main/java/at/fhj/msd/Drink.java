@@ -4,7 +4,7 @@ package at.fhj.msd;
  * Interface representing a general drink.
  * Provides methods to access volume, alcohol content, and name.
  */
-public interface Drink {
+public interface Drink{
 
     /**
      * Returns the total volume of the drink in liters.

@@ -1,5 +1,4 @@
 package at.fhj.msd;
-// fastly written (not really nice) comments you should adapt
 
 import java.util.NoSuchElementException;
 
