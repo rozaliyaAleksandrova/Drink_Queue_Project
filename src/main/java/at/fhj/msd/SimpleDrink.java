@@ -1,22 +1,18 @@
 package at.fhj.msd;
 
 /**
- * Class represents a simple drink liquid which can be used in drinks.
+ *This class represents a simple drink consisting of a single liquid.
+ * It can be used to model drinks made from one type of liquid.
  */
-public class SimpleDrink implements Drink {
+public class SimpleDrink extends Drink{
 
     /**
-     * The only liquid contained in the drink.
+     * The liquid contained in this drink.
      */
     protected Liquid l;
 
     /**
-     * Name of the drink.
-     */
-    protected String name;
-
-    /**
-     * Creates a SimpleDrink object with given name and liquid.
+     * Creates a SimpleDrink object with the given name and liquid.
      *
      * @param name name of drink
      * @param l only liquid in drink
@@ -29,7 +25,7 @@ public class SimpleDrink implements Drink {
     /**
      * Returns volume of the liquid.
      *
-     * @return the volume of drink in litre
+     * @return the volume of drink in litres.
      */
     @Override
     public double getVolume() {
@@ -37,7 +33,7 @@ public class SimpleDrink implements Drink {
     }
 
     /**
-     * Returns alcohol volume percent of the liquid.
+     * Returns the alcohol volume percentage of the liquid.
      *
      * @return alcohol volume percent
      */
@@ -47,13 +43,14 @@ public class SimpleDrink implements Drink {
     }
 
     /**
-     * Gives information if drink is alcoholic or not.
+     * Gives information  whether the drink is alcoholic or not.
      *
      * @return true when alcoholic liquids are present, otherwise false
      */
     @Override
     public boolean isAlcoholic() {
         return l.getAlcoholPercent() > 0;
+        
     }
 
     /**

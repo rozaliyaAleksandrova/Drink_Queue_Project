@@ -1,3 +1,5 @@
+package at.fhj.msd;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -6,82 +8,96 @@ import java.util.NoSuchElementException;
 // there are different Bugs, wrong implementation, typos, ...
 // write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
 
+/**
+ *  Implementation of a String Queue following the Queue interface
+ */ 
 public class StringQueue implements IQueue {
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
   /**
-   * Constructor to create a StringQueue object.
+   * Constructor to initialize queue with a specific max size.
    * @param maxSize
    */
-  public StringQueue(int maxsize) {
-    this.maxSize = maxSize;
+  public StringQueue(int maxSize) {
+   this.maxSize = maxSize;
   }
-  /**
-   * Constructor to create a StringQueue object with default size.
-   */
-  @Override
+
+/**
+ * Inserts the specified element into this queue.
+ * Prevent null elements from being added.
+ * 
+ * @param obj the element to add
+ * @return {@code true} if the element was added to the queue, 
+ *         {@code false} if the queue is full
+ * @throws NullPointerException if the specified element is null
+ * 
+ */ 
+  @Override 
   public boolean offer(String obj) {
-    if (elements.size() != maxSize)
-      elements.add(obj);
-    else
-      return false;
-
-    return true;
-  }
-  /**
-   * Adds an element to the queue.
-   * @param obj the String object to add
-   * @return true if added successfully
-   */
-  @Override
-  public String poll() {
-    String element = peek();
-
-    if (elements.size() == 0) {
-      elements.remove(0);
+    if (obj == null) {
+      throw new NullPointerException("Null elements are not allowed");
     }
-
-    return element;
+    if (elements.size() < maxSize) {
+      return elements.add(obj);
+    } else {
+      return false; 
+    }
   }
+
   /**
    * Retrieves and removes the head of the queue, or returns null if empty
+   * 
    * @return the head of the queue or null if queue is empty
    */
+  @Override
+  public String poll() {  
+    if (elements.isEmpty()) {
+      return null;
+    }
+    return elements.remove(0);
+  }
+
+ /**
+  * Removes and returns the head of the queue.
+  * If the queue is empty, throws a {@link NoSuchElementException}.
+  *
+  * @return the element at the head of the queue
+  * @throws NoSuchElementException if the queue is empty
+  */
   @Override
   public String remove() {
     String element = poll();
-    element = "";
-    if (element == null)
-      throw new NoSuchElementException("there's no element any more");
-
+    if (element == null){
+      throw new NoSuchElementException("There's no element anymore.");
+    }
     return element;
   }
   /**
-   * Retrieves and removes the head of the queue
+   * Return the head element without removing it, or null if empty.
+   * 
    * @return the head of the queue
-   * @throws NoSuchElementException if queue is empty
    */
   @Override
   public String peek() {
-    String element;
-    if (elements.size() > 0)
-      element = elements.get(0);
-    else
-      element = null;
-
-    return element;
+    if (elements.size() > 0) {
+      return elements.get(0);
+        } else {
+          return null;
+       }
   }
+
   /**
-   * Retrieves but does not remove the head of the queue, returns null if empty
+   * Retrieves the head of the queue without removing it.
+   * 
    * @return the head of the queue or null if queue is empty
+   * @throws NoSuchElementException if queue is empty
    */
   @Override
   public String element() {
     String element = peek();
-    if (element == null)
-      throw new NoSuchElementException("there's no element any more");
-
+    if (element == null) {
+      throw new NoSuchElementException("There's no element anymore");
+    }
     return element;
   }
-
 }
