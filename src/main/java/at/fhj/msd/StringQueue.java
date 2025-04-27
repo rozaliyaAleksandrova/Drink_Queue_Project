@@ -11,10 +11,10 @@ public class StringQueue implements IQueue {
   private int maxSize = 5;
   /**
    * Constructor to create a StringQueue object.
-   * @param maxsize
+   * @param maxSize
    */
   public StringQueue(int maxsize) {
-    maxSize = maxSize;
+    this.maxSize = maxSize;
   }
   /**
    * Constructor to create a StringQueue object with default size.
