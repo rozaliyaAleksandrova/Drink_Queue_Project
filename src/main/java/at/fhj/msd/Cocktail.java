@@ -1,12 +1,16 @@
 package at.fhj.msd;
 
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Class represents a cocktail drink consisting of multiple liquid ingredients.
  * Implements the Drink interface.
  */
 public class Cocktail implements Drink {
+
+    private static final Logger logger = LogManager.getLogger(Cocktail.class);
 
     private String name;
     private List<Liquid> ingredients;
@@ -18,6 +22,7 @@ public class Cocktail implements Drink {
      * @param ingredients list of liquids
      */
     public Cocktail(String name, List<Liquid> ingredients) {
+        logger.debug("Creating new Cocktail: {}", name); 
         this.name = name;
         this.ingredients = ingredients;
     }
@@ -42,11 +47,16 @@ public class Cocktail implements Drink {
     @Override
     public double getAlcoholPercent() {
         double totalVolume = getVolume();
-        if (totalVolume == 0) return 0;
+        if (totalVolume <= 0) {
+            logger.debug("Zero or negative volume for {}, returning 0 alcohol", name);
+            return 0;
+        }
         double alcoholSum = ingredients.stream()
             .mapToDouble(l -> l.getVolume() * l.getAlcoholPercent())
             .sum();
-        return alcoholSum / totalVolume;
+        double percent = alcoholSum / totalVolume;
+        logger.debug("Calculated alcohol percent for {}: {}", name, percent);
+        return percent;
     }
 
     /**
@@ -56,8 +66,10 @@ public class Cocktail implements Drink {
      */
     @Override
     public boolean isAlcoholic() {
-        return ingredients.stream()
+        boolean alcoholic = ingredients.stream()
                           .anyMatch(l -> l.getAlcoholPercent() > 0);
+        logger.debug("Checked if {} is alcoholic: {}", name, alcoholic);
+        return alcoholic;
     }
 
     /**

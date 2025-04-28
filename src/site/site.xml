@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.8.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 http://maven.apache.org/xsd/decoration-1.8.0.xsd">
+   <bannerLeft>
+    <name>Drink Queue Project</name>
+    <src>https://www.fh-joanneum.at/fileadmin/templates/img/logo.png</src>
+    <href>https://www.fh-joanneum.at/msd</href>
+  </bannerLeft>
+  <body>
+  <menu name="Overview">
+<item name="Introduction" href="index.html"/>
+<item name="Team" href="team.html"/>
+<item name="Rozaliya Aleksandrova" href="member2.html"/>
+<item name="Mario Shenouda" href="member1.html"/>
+<item name="Project" href="summary.html"/>
+<item name="API documentation" href="project-reports.html"/>
+<item name="Dependencies" href="dependencies.html"/>
+<item name="Plugins" href="plugins.html"/>
+</menu>
+<menu name="Reports">
+<item name="Test Coverage" href="jacoco/index.html"/>
+<item name="Test Results" href="surefire-report.html"/>
+    </menu>
+  </body>
+</project>

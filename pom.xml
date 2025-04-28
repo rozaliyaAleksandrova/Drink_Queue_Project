@@ -3,15 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <description>A simple program written in Java designed to teach and practice "How to turn abstract ideas (queue operations) into working code".</description>
+      <description>A simple program written in Java designed to teach and practice "How to turn abstract ideas (queue operations) into working code" by simulating drinks in a bar.</description>
 
     <groupId>at.fhj.msd</groupId>
     <artifactId>drink_queue_project</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>Drink_Queue_Project</name>
+    <name>Drink Queue Project</name>
     <url>https://github.com/rozaliyaAleksandrova/Drink_Queue_Project</url>
- 
+
+  <organization>
+    <name>FH JOANNEUM GmbH</name>
+    <url>https://www.fh-joanneum.at/msd</url>
+  </organization>
       
   <developers>
     <developer>
@@ -155,12 +159,22 @@
   </build>
 
   <reporting>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>3.0.0-M5</version>
-      </plugin>
-    </plugins>
-  </reporting>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-project-info-reports-plugin</artifactId>
+      <version>3.4.2</version>
+    </plugin>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-report-plugin</artifactId>
+      <version>3.0.0-M5</version>
+    </plugin>
+    <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.8.12</version>
+    </plugin>
+  </plugins>
+</reporting>
 </project>

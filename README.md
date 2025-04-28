@@ -28,7 +28,6 @@
 
 8. DrinkQueue.java - implementing Drink interface in a queue.
 
-9.  
    
 ## ⚔️Getting Started
 
@@ -122,7 +121,7 @@ Proper structure to execute the tests smoothly:
 
 To enable logging in this project, ensure that you correctly configure the `log4j2.xml` file in the `src/main/resources` directory. A template file is included in the repository as `log4j2.xml.template`.
 
-![Srukture](./resources/images/Readme.md_Strictur.png)
+![Srukture](./resources/images/log4j2.xml.png)
 
 ## 📋 Tasks List
 
@@ -134,7 +133,7 @@ To enable logging in this project, ensure that you correctly configure the `log4
 - [x] Branch queue
 - [x] Branch javadoc
 - [x] Branch tests
-- [ ] Branch maven_site
+- [x] Branch maven_site
   
 
 
@@ -143,13 +142,9 @@ To enable logging in this project, ensure that you correctly configure the `log4
 
 Mario Shenouda
 
-[member1.md](./member1.md)
-
 [GitHub Profile - Shenouda](https://github.com/Juma2016)
 
 Rozaliya Aleksandrova
-
-[member2.md](./member2.md)
 
 [GitHub Profile - Aleksandrova](https://github.com/rozaliyaAleksandrova)
 
