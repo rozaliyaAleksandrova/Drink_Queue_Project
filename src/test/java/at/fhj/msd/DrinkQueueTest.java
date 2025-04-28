@@ -6,17 +6,18 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.NoSuchElementException;
 
 /**
- * Tests for {@link DrinkQueue} class verifying queue operations
+ * Tests for DrinkQueue class verifying queue operations
  * according to the Queue interface specification.
  */
 class DrinkQueueTest {
     private DrinkQueue queue;
     private Drink drink1;
-
+    private Drink drink2;
     @BeforeEach
     void setUp() {
         queue = new DrinkQueue();
         drink1 = new SimpleDrink("Beer", new Liquid("Beer", 0.5, 5));
+        drink2 = new SimpleDrink("Wine", new Liquid("Wine", 0.75, 12));
     }
 
     /**
@@ -97,4 +98,37 @@ class DrinkQueueTest {
         assertEquals(0, queue.size(),
             "Queue size should decrement after poll()");
     }
+/**
+ * Tests the remove() method to ensure it removes and returns the first element.
+ * Also checks whether the NoSuchElementException is thrown when the queue is empty.
+ */
+@Test
+    void testRemove() {
+        // Fill queue with an element
+        queue.offer(drink1);
+        // Removed element should be the first element
+        assertEquals(drink1, queue.remove(), "remove() should return the first element");
+        // Queue is now empty, remove() should throw NoSuchElementException
+        assertThrows(NoSuchElementException.class, () -> queue.remove(),
+            "remove() should throw NoSuchElementException if the queue is empty");
+    }
+
+    /**
+     * Testet die Methode isEmpty(), um sicherzustellen, dass sie true ist, wenn die Queue leer ist,
+     * und false, wenn Elemente vorhanden sind.
+     */
+    @Test
+    void testIsEmpty() {
+        // Neue Queue ist initial leer
+        assertTrue(queue.isEmpty(), "New queue should be empty");
+        // Add element
+        queue.offer(drink1);
+        // After adding, the queue should not be empty
+        assertFalse(queue.isEmpty(), "Queue should not be empty after offer()");
+        // Remove element
+        queue.poll();
+        // After removal the queue is empty again
+        assertTrue(queue.isEmpty(), "Queue should be empty again after poll()");
+    }
+
 }

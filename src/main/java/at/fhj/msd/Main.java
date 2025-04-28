@@ -3,7 +3,7 @@ package at.fhj.msd;
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class Main{
     public static void main(String[] args) {
         // 1. Creating of simple liquids
         Liquid water = new Liquid("Water", 0.5, 0.0);

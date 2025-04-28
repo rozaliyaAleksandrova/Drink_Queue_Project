@@ -67,4 +67,51 @@ class CocktailTest {
         assertEquals(0, mocktail.getAlcoholPercent(), 0.001,
             "Alcohol percentage should be exactly 0 for non-alcoholic cocktails");
     }
+    /**
+     * Tests the getIngredients and setIngredients methods.
+     */
+        @Test
+        void testGetAndSetIngredients() {
+    // Create a list of ingredients
+    List<Liquid> initialIngredients = Arrays.asList(
+        new Liquid("Wasser", 0.2, 0),
+        new Liquid("Saft", 0.3, 0)
+    );
+    Cocktail cocktail = new Cocktail("Testcocktail", initialIngredients);
+
+    // Check if getIngredients() returns the correct list
+    assertEquals(initialIngredients, cocktail.getIngredients(), "getIngredients sollte die ursprüngliche Zutatenliste zurückgeben");
+
+    // Create new ingredients list
+    List<Liquid> newIngredients = Arrays.asList(
+        new Liquid("Sirup", 0.1, 0),
+        new Liquid("Eis", 0.05, 0)
+    );
+
+    // call setIngredients()
+    cocktail.setIngredients(newIngredients);
+
+    // Check if the ingredients list has been updated
+    assertEquals(newIngredients, cocktail.getIngredients(), "Nach setIngredients sollte die Zutatenliste aktualisiert sein");
+}
+
+    /**
+     * Tests the setName() method.
+     */
+     @Test
+     void testSetName() {
+     List<Liquid> ingredients = Arrays.asList(
+        new Liquid("Wasser", 0.2, 0)
+    );
+    Cocktail cocktail = new Cocktail("AlterName", ingredients);
+
+    // Check if the name was set correctly
+    assertEquals("AlterName", cocktail.getName(), "Initialer Name sollte korrekt sein");
+
+    // call setName() to change the name
+    cocktail.setName("NeuerName");
+
+    // Check if the name has been updated
+    assertEquals("NeuerName", cocktail.getName(), "Der Name sollte nach setName aktualisiert sein");
+}
 }

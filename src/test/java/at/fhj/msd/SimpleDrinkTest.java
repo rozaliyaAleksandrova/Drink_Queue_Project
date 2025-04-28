@@ -25,4 +25,19 @@ class SimpleDrinkTest {
         drink.setLiquid(new Liquid("Water", 1.0, 0));
         assertFalse(drink.isAlcoholic());
     }
+    /**
+     *This test checks the getLiquid() method to ensure that it returns the correct Liquid object that was set,
+     * when the SimpleDrink object was created.
+     */
+    @Test
+    void testGetLiquid() {
+        Liquid liquid = new Liquid("Cola", 0.33, 0);
+        SimpleDrink drink = new SimpleDrink("Cola Drink", liquid);
+
+        // Check if the returned liquid is the same as the original
+        assertSame(liquid, drink.getLiquid(), "The returned liquid should be identical to the original.");
+        
+    }
+
+
 }

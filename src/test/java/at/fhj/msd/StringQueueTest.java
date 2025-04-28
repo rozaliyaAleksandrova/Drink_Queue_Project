@@ -49,4 +49,28 @@ class StringQueueTest {
         // When the queue is empty, element() should throw NoSuchElementException
         assertThrows(NoSuchElementException.class, () -> queue.element());
     }
+
+    @Test
+    void testOfferNullElement() {
+        // Test that offer(null) throws a NullPointerException
+        assertThrows(NullPointerException.class, () -> queue.offer(null));
+    }
+
+    @Test
+    void testRemoveFromNonEmptyQueue() {
+        // Fill queue with an element
+        queue.offer("element");
+        // remove() should return the element and remove it from the queue
+        String removed = queue.remove();
+        assertEquals("element", removed);
+        // After removal, the queue should be empty
+        assertNull(queue.peek());
+    }
+
+    @Test
+    void testRemoveFromEmptyQueue() {
+        // If the queue is empty, remove() should throw a NoSuchElementException
+        assertThrows(NoSuchElementException.class, () -> queue.remove());
+    }
+
 }
