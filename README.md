@@ -87,13 +87,36 @@ You can create the drinks in your main() method in the Main class and then call 
 
 [Copy example from here!](./resources/images/testfile.md)
 
+### Test Class and Setup 
+In the folder Drink_Queue_Project\src\test\java\at\fhj\msd you will find all the test classes.
+To run the `tests` and display the output of the code and whether the tests were successful.
+
+In Intellij: right click on Run/Debug -> Run … with coverage
+Or in VSCode via command in the console: mvn test
+
+![How to...](./resources/images/Intelij_how_to.png)
 
 
+If the tests are **successful** you will see an output similar to the following:
+
+
+
+![successful test](./resources/images/j5test.png)
+
+And if the tests **are not successful:**
+
+
+![failed test](./resources/images/testF.png)
 
 ### 🪜 Structure
 
 Мake sure you have the proper structure to execute the code. See the example below.⬇️\
 ![Srukture](./resources/images/structure.png)
+
+Proper structure to execute the tests smoothly:
+
+![Srukture](./resources/images/test_str.png)
+
 
 ### Log4j2 Configuration
 

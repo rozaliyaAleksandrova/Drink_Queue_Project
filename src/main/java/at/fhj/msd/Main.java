@@ -45,7 +45,7 @@ public class Main {
         }
     }
     
-    private static void printDrinkInfo(Drink drink) {
+    static void printDrinkInfo(Drink drink) {
         System.out.println("Drink: " + drink.getName());
         System.out.printf("Volume: %.2f liters \n", drink.getVolume());
         System.out.printf("Alcohol: %.1f%% \n", drink.getAlcoholPercent());
