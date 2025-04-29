@@ -1,4 +1,4 @@
-## Member 1: # Rozaliya Aleksandrova
+## Member 1: Rozaliya Aleksandrova
 
 ### Role
 Developer
