@@ -30,28 +30,17 @@ public interface IQueue {
      */
   public abstract String remove();
 
-  /**
-     * Retrieves, but does not remove, the head of the queue.
-     * 
-     * @return the head element, or null if the queue is empty
-     */ 
-  public abstract String peek();
+ /**
+ * Retrieves, but does not remove, the head of the queue.
+ *
+ * @return the head element, or null if the queue is empty
+ */
+public abstract String peek();
 
-<<<<<<< Updated upstream
-
-  /**
-     * Retrieves, but does not remove, the head of the queue.
-     * 
-     * @return the head element
-     * @throws NoSuchElementException if the queue is empty
-     */
-=======
-  // element is to peek what remove is to poll
-  /**
-   *  * Retrieves but does not remove the head of the queue
-   * @return
-   */
-  
->>>>>>> Stashed changes
-  public abstract String element();
+/**
+ * Retrieves but does not remove the head of the queue
+ * @return the head element
+ * @throws NoSuchElementException if the queue is empty
+ */
+public abstract String element();
 }
