@@ -1,7 +1,13 @@
 package at.fhj.msd;
 
-// Class representing a liquid that can be added to drinks
-public class Liquid {
+    /**
+     * Class representing a liquid that can be added to drinks.
+     * 
+     * @param name name of the liquid
+     * @param volume volume in liters
+     * @param alcoholPercent alcohol percentage
+     */
+    public class Liquid {
 
     // Name of the liquid
     private String name; 
@@ -19,32 +25,56 @@ public class Liquid {
         this.alcoholPercent = alcoholPercent;
     }
 
-    // Getter for name
+    /**
+     * Gets the name of the liquid.
+     * 
+     * @return name
+     */
     public String getName() {
         return name;
     }
 
-    // Setter for name
+    /**
+     * Sets the name of the liquid.
+     * 
+     * @param name new name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
-     // Getter for volume
+    /**
+     * Gets the volume.
+     * 
+     * @return volume in liters
+     */
     public double getVolume() {
         return volume;
     }
 
-    // Setter for volum
+    /**
+     * Sets the volume.
+     * 
+     * @param volume new volume
+     */
     public void setVolume(double volume) {
         this.volume = volume;
     }
 
-    // Getter for alcohol percentage
+    /**
+     * Gets alcohol percentage.
+     * 
+     * @return alcohol percentage
+     */
     public double getAlcoholPercent() {
         return alcoholPercent;
     }
- 
-    // Setter for alcohol percentage
+
+    /**
+     * Sets alcohol percentage.
+     * 
+     * @param alcoholPercent new alcohol percentage
+     */
     public void setAlcoholPercent(double alcoholPercent) {
         this.alcoholPercent = alcoholPercent;
     }

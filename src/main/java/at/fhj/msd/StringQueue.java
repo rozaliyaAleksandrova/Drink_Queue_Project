@@ -4,40 +4,46 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-// there's some Bugs included, try to debug the code and fix the Bugs
-// there are different Bugs, wrong implementation, typos, ...
-// write Test-Cases (read Queue Interface for understanding methods) and use Debugging possibilies of your IDE
-
-// Implementation of a String Queue following the Queue interface
+/**
+ *  Implementation of a String Queue following the Queue interface
+ */ 
 public class StringQueue implements IQueue {
   private List<String> elements = new ArrayList<String>();
   private int maxSize = 5;
-
-//Constructor to initialize queue with a specific max size
+  /**
+   * Constructor to initialize queue with a specific max size.
+   * @param maxSize
+   */
   public StringQueue(int maxSize) {
    this.maxSize = maxSize;
   }
-  /**
-   * Constructor to create a StringQueue object with default size.
-   */
-  @Override
+
+/**
+ * Inserts the specified element into this queue.
+ * Prevent null elements from being added.
+ * 
+ * @param obj the element to add
+ * @return {@code true} if the element was added to the queue, 
+ *         {@code false} if the queue is full
+ * @throws NullPointerException if the specified element is null
+ * 
+ */ 
+  @Override 
   public boolean offer(String obj) {
     if (obj == null) {
       throw new NullPointerException("Null elements are not allowed");
     }
-
-// Check if there's space to add new element
     if (elements.size() < maxSize) {
       return elements.add(obj);
     } else {
-  // Queue is full
       return false; 
     }
   }
+
   /**
-   * Adds an element to the queue.
-   * @param obj the String object to add
-   * @return true if added successfully
+   * Retrieves and removes the head of the queue, or returns null if empty
+   * 
+   * @return the head of the queue or null if queue is empty
    */
   @Override
   public String poll() {  
@@ -47,7 +53,13 @@ public class StringQueue implements IQueue {
     return elements.remove(0);
   }
 
-// Remove and return the head; throw exception if empty
+ /**
+  * Removes and returns the head of the queue.
+  * Throws NoSuchElementException, if the queue is empty.
+  *
+  * @return the element at the head of the queue
+  * @throws NoSuchElementException if the queue is empty
+  */
   @Override
   public String remove() {
     String element = poll();
@@ -56,18 +68,26 @@ public class StringQueue implements IQueue {
     }
     return element;
   }
-
-// Return the head element without removing it, or null if empty
-@Override
-public String peek() {
-  if (elements.size() > 0) {
-    return elements.get(0);
-  } else {
-    return null;
+  /**
+   * Return the head element without removing it, or null if empty.
+   * 
+   * @return the head of the queue
+   */
+  @Override
+  public String peek() {
+    if (elements.size() > 0) {
+      return elements.get(0);
+        } else {
+          return null;
+       }
   }
-}
 
-// Return the head element without removing it; throw exception if empty
+  /**
+   * Retrieves the head of the queue without removing it.
+   * 
+   * @return the head of the queue or null if queue is empty
+   * @throws NoSuchElementException if queue is empty
+   */
   @Override
   public String element() {
     String element = peek();

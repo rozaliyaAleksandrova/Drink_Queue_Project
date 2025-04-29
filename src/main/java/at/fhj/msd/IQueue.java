@@ -1,45 +1,48 @@
 package at.fhj.msd;
 
+import java.util.NoSuchElementException;
+
 /**
- * Interface for a queue data structure that stores elements of type String.
+ * Interface representing a queue data structure that stores String elements.
  */
 public interface IQueue {
 
-    /**
-     * Adds an element to the queue if possible.
-     *
+  /**
+     * Inserts the specified element into the queue if possible.
+     * 
      * @param obj the element to add
      * @return true if the element was added successfully, false otherwise
      */
-     boolean offer(String obj);
+  public abstract boolean offer(String obj);
 
-    /**
-     * Retrieves and removes the first element of the queue.
-     *
-     * @return the first element, or null if the queue is empty
+ /**
+     * Retrieves and removes the head of the queue.
+     * 
+     * @return the head element, or null if the queue is empty
      */
-     String poll();
+  public abstract String poll();
 
-    /**
-     * Retrieves and removes the first element of the queue.
-     *
-     * @return the first element
-     * @throws java.util.NoSuchElementException if the queue is empty
+  /**
+     * Retrieves and removes the head of the queue.
+     * 
+     * @return the head element
+     * @throws NoSuchElementException if the queue is empty
      */
-     String remove()throws java.util.NoSuchElementException;
+  public abstract String remove();
 
-    /**
-     * Retrieves (but does not remove) the first element of the queue.
-     *
-     * @return the first element, or null if the queue is empty
-     */
-     String peek();
+  /**
+     * Retrieves, but does not remove, the head of the queue.
+     * 
+     * @return the head element, or null if the queue is empty
+     */ 
+  public abstract String peek();
 
-    /**
-     * Retrieves (but does not remove) the first element of the queue.
-     *
-     * @return the first element
-     * @throws java.util.NoSuchElementException if the queue is empty
+
+  /**
+     * Retrieves, but does not remove, the head of the queue.
+     * 
+     * @return the head element
+     * @throws NoSuchElementException if the queue is empty
      */
-    String element() throws java.util.NoSuchElementException;
+  public abstract String element();
 }
