@@ -47,16 +47,20 @@ public class Cocktail implements Drink {
     @Override
     public double getAlcoholPercent() {
         double totalVolume = getVolume();
+        // Handle cases where total volume is zero or negative
         if (totalVolume <= 0) {
             logger.debug("Zero or negative volume for {}, returning 0 alcohol", name);
             return 0;
         }
+        // Calculate total alcohol content
         double alcoholSum = ingredients.stream()
             .mapToDouble(l -> l.getVolume() * l.getAlcoholPercent())
             .sum();
         double percent = alcoholSum / totalVolume;
         logger.debug("Calculated alcohol percent for {}: {}", name, percent);
-        return percent;
+        double roundedPercent = Math.round(percent * 100) / 100.0;
+        logger.debug("Calculated alcohol percent for {}: {}", name, roundedPercent);
+        return roundedPercent;
     }
 
     /**

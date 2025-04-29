@@ -114,4 +114,21 @@ class CocktailTest {
     // Check if the name has been updated
     assertEquals("NeuerName", cocktail.getName(), "Der Name sollte nach setName aktualisiert sein");
 }
+    /**
+     * Tests the with getAlcoholPercent() with negative volume.
+     */
+@Test
+void testNegativeVolume() {
+    // Create ingredients with negative volume 
+    List<Liquid> ingredients = Arrays.asList(
+        new Liquid("ErrorLiquid", -0.1, 10)
+    );
+    Cocktail cocktail = new Cocktail("InvalidCocktail", ingredients);
+    
+    // Should handle negative volume and return 0
+    assertEquals(0, cocktail.getAlcoholPercent(), 0.001,
+        "Should return 0 when total volume is negative");
+}
+
+
 }

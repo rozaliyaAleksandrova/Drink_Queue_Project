@@ -27,7 +27,7 @@ Each member of the group adds their own developer information.
 - **Branch `tests`**:
  Creating a bug_hunt branch:
  Create tests for both existing and new classes named according to the following naming scheme – NameOfClassTest .
- 100% test coverage for all classes must be achieved. I achieved over 95%, but not 100%.
+ 100% test coverage for all classes must be achieved. I achieved 99%, but not 100%.
  Update project structure and Readme.md
   
 - **Branch `maven_site`**:
